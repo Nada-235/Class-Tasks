@@ -21,7 +21,7 @@ class User {
         this.xp = xp;
         this.log = arr;
     }
-
+    
     newSolvedChallengel(obj){
         let v = obj.Level;
         // console.log(v)
