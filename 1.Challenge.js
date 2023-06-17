@@ -16,40 +16,28 @@ var levels = {
 }
 
 class User {
-    constructor (userName,xp,arr){
+    constructor(userName, xp, arr) {
         this.userName = userName;
         this.xp = xp;
         this.log = arr;
     }
-
-    newSolvedChallengel(obj){
-        let v = obj.Level;
-        // console.log(v)
-        this.xp = this.xp+levels[v];
-        // console.log(this.xp);
-        this.log.push(obj.id);
-        // console.log(this.log);
+    newSolvedChallengel(Challenge) {
+        this.xp = this.xp + levels[Challenge.level];
+        this.log.push(Challenge.id);
     }
-
 }
 
-class Challenge{
-    constructor ( id , level )
-    this.id = id;
-    this.level = level;
+class Challenge {
+    constructor(id, level) {
+        this.id = id;
+        this.level = level;
+    }
 }
-
 var user1 = new User("JAD", 0, []);
 console.log(user1);
-user1.newSolvedChallengel({
-    id: 1,
-    Level: 'VE'
-});
+user1.newSolvedChallengel(new Challenge(1, "ME"));
+user1.newSolvedChallengel(new Challenge(2, "ME"));
+user1.newSolvedChallengel(new Challenge(3, "EA"));
 
-let o = {
-        id: 2, 
-        Level: 'ME'
-};
-        user1.newSolvedChallengel(o);
-        console.log(user1.xp);
-        console.log(user1.log);
+console.log("XP:",user1.xp);
+console.log("Log:",user1.log);
