@@ -21,7 +21,7 @@ class User {
         this.xp = xp;
         this.log = arr;
     }
-    
+
     newSolvedChallengel(obj){
         let v = obj.Level;
         // console.log(v)
@@ -31,6 +31,12 @@ class User {
         // console.log(this.log);
     }
 
+}
+
+class Challenge{
+    constructor ( id , level )
+    this.id = id;
+    this.level = level;
 }
 
 var user1 = new User("JAD", 0, []);
