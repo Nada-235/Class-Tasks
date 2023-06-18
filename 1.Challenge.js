@@ -25,7 +25,7 @@ class User {
     newSolvedChallengel(Challenge){
         //let v = Challenge.Level;
         // console.log(v)
-        this.xp = this.xp+levels[Challenge.Level];
+        this.xp = this.xp+levels[Challenge.level];
         // console.log(this.xp);
         this.log.push(Challenge.id);
         // console.log(this.log);
@@ -37,12 +37,12 @@ var user1 = new User("JAD", 0, []);
 console.log(user1);
 user1.newSolvedChallengel({
     id: 1,
-    Level: 'VE'
+    level: 'VE'
 });
 
 let o = {
         id: 2, 
-        Level: 'ME'
+        level: 'ME'
 };
         user1.newSolvedChallengel(o);
         console.log(user1.xp);
