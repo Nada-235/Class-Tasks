@@ -22,12 +22,12 @@ class User {
         this.log = arr;
     }
 
-    newSolvedChallengel(obj){
-        let v = obj.Level;
+    newSolvedChallengel(Challenge){
+        //let v = Challenge.Level;
         // console.log(v)
-        this.xp = this.xp+levels[v];
+        this.xp = this.xp+levels[Challenge.Level];
         // console.log(this.xp);
-        this.log.push(obj.id);
+        this.log.push(Challenge.id);
         // console.log(this.log);
     }
 
